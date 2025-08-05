@@ -27,7 +27,7 @@ def index():
 def mark_attendance():
     user_id = request.form.get('user_id')
     if not user_id:
-        return "❌ No user_id", 400
+        return "No user_id", 400
 
     conn = sqlite3.connect(DB_FILE)
     c = conn.cursor()
@@ -53,7 +53,7 @@ def clear_records():
     c.execute("DELETE FROM attendance")
     conn.commit()
     conn.close()
-    return "<h2 style='color:lime;font-family:monospace;'>🧹 All records cleared.<br><a href='/records'>⬅️ Back to Records</a></h2>"
+    return "<h2 style='color:lime;font-family:monospace;'>🧹 All records cleared.<br><a href='/records'>Back to Records</a></h2>"
 
 
 if __name__ == '__main__':
