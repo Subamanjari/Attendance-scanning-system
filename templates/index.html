@@ -5,9 +5,9 @@
     <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
     <style>
         body {
-            background-color: #121212;
-            color: #00ff99;
-            font-family: 'Courier New', Courier, monospace;
+            background-color: #f9f9f9;
+            color: #333;
+            font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -17,22 +17,20 @@
         }
 
         h1 {
-            margin-bottom: 30px;
-            font-size: 28px;
-            text-shadow: 0 0 10px #00ffcc;
+            margin-bottom: 20px;
+            font-size: 22px;
         }
 
         #reader {
-            width: 320px;
-            border: 3px solid #00ff99;
+            width: 300px;
+            border: 1px solid #ccc;
             padding: 10px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px #00ffcc;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    <h1>📡 Scan Your QR Code to Log Attendance</h1>
+    <h1>Scan QR Code to Mark Attendance</h1>
     <div id="reader"></div>
 
     <form id="attendanceForm" action="/mark_attendance" method="POST" style="display: none;">

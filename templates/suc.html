@@ -4,40 +4,45 @@
     <title>Attendance Success</title>
     <style>
         body {
-
-            background-color: #0f0f0f;
-            color: #00ff9d;
-            font-family: 'Courier New', Courier, monospace;
+            background-color: #f9f9f9;
+            color: #333;
+            font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
             text-align: center;
+            margin: 0;
         }
 
         h2 {
-            font-size: 24px;
-            text-shadow: 0 0 10px #00ffcc;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        code {
+            background-color: #eaeaea;
+            padding: 5px 10px;
+            border-radius: 4px;
         }
 
         a {
-            margin-top: 20px;
-            color: #00ffcc;
+            margin: 0 10px;
+            color: #007bff;
             text-decoration: none;
-            font-weight: bold;
         }
 
         a:hover {
-            color: #ff00ff;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <h2>✅ Attendance Recorded for: <br><br><code>{{ student_id }}</code></h2>
-    <a href="/">🔁 Scan Another</a> |
-    <a href="/records">📋 View Records</a>
+    <h2>✅ Attendance Recorded for:<br><br><code>{{ student_id }}</code></h2>
+    <div>
+        <a href="/">Scan Another</a> |
+        <a href="/records">View Records</a>
+    </div>
 </body>
 </html>
-
-
